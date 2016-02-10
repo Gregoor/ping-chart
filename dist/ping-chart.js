@@ -66,7 +66,7 @@
 	var line = _d2.default.svg.line().x(function (d) {
 	  return d.x;
 	}).y(function (d) {
-	  return height - d.ping;
+	  return y(d.ping);
 	});
 
 	var svg = _d2.default.select('svg#chart').attr({

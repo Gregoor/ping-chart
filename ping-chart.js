@@ -8,7 +8,7 @@ const height = 500 - margin.top - margin.bottom;
 const y = d3.scale.linear().range([height, 0]);
 const yAxis = d3.svg.axis().scale(y).orient('left');
 
-const line = d3.svg.line().x((d) => d.x).y((d) => height - d.ping);
+const line = d3.svg.line().x((d) => d.x).y((d) => y(d.ping));
 
 const svg = d3.select('svg#chart')
   .attr({
