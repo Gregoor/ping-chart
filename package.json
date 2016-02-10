@@ -1,0 +1,23 @@
+{
+  "name": "ping-chart",
+  "version": "1.0.0",
+  "description": "Chart your ping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gregoor",
+  "license": "ISC",
+  "keywords": [
+    "ping"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "d3": "^3.5.14"
+  }
+}
