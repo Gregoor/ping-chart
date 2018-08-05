@@ -33,16 +33,23 @@
     </div>
     <div class="mdl-card__supporting-text">
       <svg id="chart"></svg>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-right: 5px;">
-        <input class="mdl-textfield__input" type="text" id="url" value="http://192.168.0.1">
-        <label class="mdl-textfield__label" for="url">URL</label>
-      </div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-           style="width: 100px;">
-        <input class="mdl-textfield__input" type="number" id="delay" value="100">
-        <label class="mdl-textfield__label" for="delay">Delay (in ms)</label>
+      <div class="textfields" style="display:flex">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%; max-width: 100%;">
+          <input class="mdl-textfield__input" type="text" id="url" value="http://192.168.0.1">
+          <label class="mdl-textfield__label" for="url">URL</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="number" id="delay" value="100">
+          <label class="mdl-textfield__label" for="delay">Delay (in ms)</label>
+        </div>
       </div>
       <br>
+      <div class="displayfield">Current Ping Status:  <br>
+        <div class="pingstatus">
+        --no ping sent--
+      </div>
+      <br>
+      </div>
       <em>* plus some HTTP overhead</em>
     </div>
     <div class="mdl-card__actions mdl-card--border">
