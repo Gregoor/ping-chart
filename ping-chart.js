@@ -20,11 +20,6 @@ const svg = d3.select('svg#chart')
   })
   .append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
-/*
-svg.append('g')
-  .attr({'class': 'x axis', 'transform': `translate(0, ${height})`})
-  .append('line').attr({x1: 0, y1: 0, x2: width, y2: 0});
-*/
 
 const xAxisGroup = svg.append('g').attr({'class': 'x axis', 'transform': `translate(0, ${height})`}).call(xAxis);
 xAxisGroup.append('text').attr({x: width - 50, dx: '.41em' }).style('text-anchor', 'end').text('Time since first Ping (s)');
@@ -43,7 +38,7 @@ const draw = (data, delay) => {
     data[i].x = i * pointWidth + i;
   }
 
-  x.domain([0, delay*data.length / 1000.0])
+  x.domain([0, delay * data.length / 1000.0])
   y.domain(d3.extent(data, (d) => d.ping));
   xAxisGroup.call(xAxis);
   yAxisGroup.call(yAxis);
